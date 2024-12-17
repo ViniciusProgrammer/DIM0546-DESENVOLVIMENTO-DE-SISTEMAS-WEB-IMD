@@ -5,7 +5,7 @@ header {
     padding: 1.5rem;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 .menu {
@@ -37,4 +37,29 @@ header {
 
 .menu ul li a:hover {
     background-color: #ff5252;
+}
+
+.cover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.cover-coverImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.background-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
 }
