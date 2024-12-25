@@ -6,7 +6,7 @@ header {
     font-size: 2rem;
     font-family: "Bebas Neue", serif;
     font-weight: 400;
-    font-style: normal;;
+    font-style: normal;
     background-color: #d91604b7; 
     padding: 1.5rem;
     margin: 0;
@@ -34,21 +34,62 @@ header {
 .menu ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu ul li a {
-    color: #F2E8DC;
+    color: #592418;
     text-decoration: none;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     border-radius: 4px;
     transition: background-color 0.3s;
-    color: #592418;
 }
 
 .menu ul li a:hover {
     background-color: #ff5252;
 }
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li a {
+        margin: 0.5rem 0;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .menu h1 {
+        font-size: 1.2rem;
+    }
+
+    .menu ul li a {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
 
 /* Container da imagem de fundo */
 .cover {
