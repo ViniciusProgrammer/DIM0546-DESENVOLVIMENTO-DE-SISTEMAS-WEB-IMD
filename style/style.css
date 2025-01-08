@@ -2,9 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -24,18 +32,19 @@ header {
 }
 
 .menu {
-    max-width: 1200px;
+    max-width: 75%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .menu h1 {
     color: #592418;
     font-size: 2.2rem;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -49,6 +58,7 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .menu ul li a {
@@ -56,7 +66,7 @@ header {
     text-decoration: none;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     transition: background-color 0.3s;
     transition-duration: 1s;
 }
@@ -65,69 +75,19 @@ header {
     background-color: #b92828a9;
 }
 
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu h1 {
-        font-size: 1.5rem;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu ul li a {
-        margin: 0.5rem 0;
-        padding: 1rem;
-        text-align: center;
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        font-size: 1.5rem;
-        padding: 1rem;
-    }
-
-    .menu h1 {
-        font-size: 1.2rem;
-    }
-
-    .menu ul li a {
-        font-size: 0.9rem;
-        padding: 0.8rem;
-    }
-}
-
-
 /* Container da imagem de fundo */
 .cover {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 1;
-}
-
-.cover-coverImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    
 }
 
 .background-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -138,6 +98,7 @@ header {
     margin-top: 4rem;
     margin-bottom: 2rem;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .filter-btn {
@@ -147,7 +108,7 @@ header {
     padding: 1.2rem 2rem;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -170,11 +131,12 @@ header {
 }
 
 .recipe-card {
-    width: 450px;
+    width: 90%;
+    max-width: 28rem;
     position: relative;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow: hidden;
     background-color: #fff;
     transition: transform 0.3s ease;
@@ -187,7 +149,7 @@ header {
 .recipe-image {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 50vh;
     overflow: hidden;
 }
 
@@ -237,7 +199,7 @@ header {
 
 footer {
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
     border-top: 1px solid #ddd;
 }
@@ -246,25 +208,25 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
+    gap: 2rem;
+    max-width: 75%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 2rem 0;
 }
 
 .footer-content div {
     flex: 1;
-    min-width: 200px;
+    min-width: 20rem;
 }
 
 .footer-content h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
     color: #333;
 }
 
 .footer-content p, .footer-content ul {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #666;
     line-height: 1.5;
 }
@@ -275,7 +237,7 @@ footer {
 }
 
 .footer-content ul li {
-    margin: 5px 0;
+    margin: 0.5rem 0;
 }
 
 .footer-content ul li a {
@@ -288,7 +250,96 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 1.25rem;
+    font-size: 0.75rem;
     color: #999;
+}
+
+
+@media (max-width: 48em) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .menu ul li a {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        width: 100%;
+    }
+
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .filter-btn {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .recipes {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .recipe-card {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-content div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 30em) {
+    .filter-btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .recipe-card {
+        width: 100%;
+    }
+
+    .recipe-title {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    footer {
+        padding: 0.9375rem;
+    }
+
+    .footer-content {
+        gap: 0.625rem;
+    }
+
+    .footer-content p,
+    .footer-content ul {
+        font-size: 0.9rem;
+    }
 }
