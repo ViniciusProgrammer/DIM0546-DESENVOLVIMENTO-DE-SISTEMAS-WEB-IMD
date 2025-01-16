@@ -66,6 +66,9 @@ div {
 .menu h1:hover {
     background-color: #b92828a9;
     transition-duration: 1s;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .menu div {
@@ -91,6 +94,8 @@ div {
 }
 
 .menu ul li a:hover {
+    border-radius: 10px;
+    display: inline-block;
     background-color: #b92828a9;
 }
 
