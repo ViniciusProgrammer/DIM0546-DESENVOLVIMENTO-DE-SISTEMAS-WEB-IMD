@@ -77,3 +77,9 @@ O projeto **Nossas Receitas** foi criado para oferecer uma experiência interati
 3. Para melhor experiência, certifique-se de ter acesso ao diretório `assets` contendo as imagens das receitas.
 
 ---
+
+### Autores
+
+- Vinicius Davi
+- Allan Victor
+- João Antônio
