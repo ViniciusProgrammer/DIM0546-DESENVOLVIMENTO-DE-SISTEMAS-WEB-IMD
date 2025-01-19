@@ -273,6 +273,155 @@ div {
     resize: vertical;
 }
 
+/* Estilo para o sistema de estrelas */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 30px;
+    color: #ddd;
+    padding: 0 0.2rem;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #F29F05;
+}
+
+.submit-btn {
+    background-color: #D91604;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #b92828;
+}
+
+.recent-feedback {
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-feedback h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.feedback-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.feedback-item {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.feedback-item:last-child {
+    border-bottom: none;
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-stars {
+    color: #F29F05;
+}
+
+@media (max-width: 48em) {
+    .feedback-container {
+        flex-direction: column;
+    }
+
+    .feedback-section {
+        padding: 2rem 1rem;
+    }
+    
+    .feedback-form,
+    .recent-feedback {
+        width: 100%;
+    }
+}
+
+.feedback-section {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    margin-top: 2rem;
+}
+
+.feedback-section h2 {
+    text-align: center;
+    color: #333;
+    font-family: "Archivo Black", serif;
+    margin-bottom: 2rem;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.feedback-form {
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
 .rating {
     display: flex;
     flex-direction: row-reverse;
