@@ -83,3 +83,12 @@ O projeto **Nossas Receitas** foi criado para oferecer uma experiência interati
 - Vinicius Davi
 - Allan Victor
 - João Antônio
+
+## Acessar a página do projeto
+
+[Projeto ao vivo - DIM0546](https://viniciusprogrammer.github.io/DIM0546-DESENVOLVIMENTO-DE-SISTEMAS-WEB-IMD/)
+
+```bash
+curl https://viniciusprogrammer.github.io/DIM0546-DESENVOLVIMENTO-DE-SISTEMAS-WEB-IMD/
+
+
