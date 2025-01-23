@@ -168,6 +168,25 @@ div {
     filter: none;
 }
 
+.recipe-title {
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    padding: 1rem 0;
+    margin: 0;
+    color: white;
+    background-color: #ff6b6b;
+    border-top: 1px solid  #ff5252;
+    z-index: 1;
+}
+
+.recipe-title:hover {
+    cursor: default;
+}
+
+.recipe-title:hover ~ .recipe-image img {
+    opacity: 0;
+}
+
 .recipe-image {
     position: relative;
     width: 100%;
@@ -200,23 +219,23 @@ div {
     box-sizing: border-box;
 }
 
+.recipe-image:hover .ingredients {
+    opacity: 1;
+}
+
 .recipe-image:hover img {
     opacity: 0;
 }
 
-.recipe-image:hover .recipe-content {
+.recipe-title:hover ~ .recipe-image .modo-preparo {
     opacity: 1;
 }
 
-.recipe-title {
-    font-size: 1.2rem;
-    font-family: Arial, sans-serif;
-    padding: 1rem 0;
-    margin: 0;
-    color: white;
-    background-color: #ff6b6b;
-    border-top: 1px solid  #ff5252;
+.recipe-image .ingredients,
+.recipe-image .modo-preparo {
+    opacity: 0;
 }
+
 
 .feedback-section {
     background-color: #f9f9f9;
