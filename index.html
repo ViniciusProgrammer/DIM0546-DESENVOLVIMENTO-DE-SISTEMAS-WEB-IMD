@@ -38,6 +38,7 @@
             <button class="filter-btn" data-filter="sobremesa">Sobremesa</button>
             <button class="filter-btn" data-filter="vegano">Vegano</button>
             <button class="filter-btn" data-filter="caseiro">Caseiro</button>
+            <button class="filter-btn" id="random-recipe">Aleatório</button>
         </div>
         
         <div class="recipes">
@@ -49,6 +50,15 @@
                     </div>
                 </div>
                 <h3 class="recipe-title">Bolo de Chocolate</h3>
+            </div>
+            <div class="recipe-card" data-category="sobremesa">
+                <div class="recipe-image">
+                    <img src="assets/panqueca.jpg" alt="Panqueca com Mel">
+                    <div class="recipe-content">
+                        <p>Ingredientes: <br> - Framboesas <br> - Mel <br> - Ovos <br> - Açúcar</p>
+                    </div>
+                </div>
+                <h3 class="recipe-title">Panqueca com Mel</h3>
             </div>
             <div class="recipe-card" data-category="caseiro">
                 <div class="recipe-image">
@@ -67,6 +77,33 @@
                     </div>
                 </div>
                 <h3 class="recipe-title">Hamburger Caseiro</h3>
+            </div>
+            <div class="recipe-card" data-category="caseiro">
+                <div class="recipe-image">
+                    <img src="assets/sorvetecaseiro.jpg" alt="Sorvete Caseiro">
+                    <div class="recipe-content">
+                        <p>Ingredientes: <br> - Farinha <br> - Molho de Tomate <br> - Queijo <br> - Manjericão</p>
+                    </div>
+                </div>
+                <h3 class="recipe-title">Sorvete Caseiro</h3>
+            </div>
+            <div class="recipe-card" data-category="vegano">
+                <div class="recipe-image">
+                    <img src="assets/paovegano.jpg" alt="Pão Vegano">
+                    <div class="recipe-content">
+                        <p>Ingredientes: <br> - Folhas de Manjericão <br> - Abacate <br> - Pão Fatiado</p>
+                    </div>
+                </div>
+                <h3 class="recipe-title">Pão Vegano</h3>
+            </div>
+            <div class="recipe-card" data-category="vegano">
+                <div class="recipe-image">
+                    <img src="assets/macarrãovegano.jpg" alt="Macarrão Vegano">
+                    <div class="recipe-content">
+                        <p>Ingredientes: <br> - Folhas de Manjericão <br> - Abacate <br> - Pão Fatiado</p>
+                    </div>
+                </div>
+                <h3 class="recipe-title">Macarrão Vegano</h3>
             </div>
         </div>
     </div>
@@ -138,7 +175,18 @@
                 });
             });
         });
+
+        const randomRecipeButton = document.getElementById("random-recipe");
+        randomRecipeButton.addEventListener("click", () => {
     
+            recipeCards.forEach(card => {
+                card.style.display = "none";
+            });
+
+            const randomIndex = Math.floor(Math.random() * recipeCards.length);
+            recipeCards[randomIndex].style.display = "block";
+        });
+        
         // Adicionando o script do feedback
         document.getElementById('feedbackForm').addEventListener('submit', function(e) {
             e.preventDefault();
